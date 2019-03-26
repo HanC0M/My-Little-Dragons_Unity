@@ -7,6 +7,6 @@ public class ShowInventory : MonoBehaviour
     public GameObject panel;
     public void ChangeInventory()
     {
-        panel.SetActive(!panel.active);
+        panel.SetActive(!panel.activeSelf);
     }
 }
