@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayButton : MonoBehaviour
 {
-    public DataController dataController;
+    /*public DataController dataController;
     public void OnClick()
     {
         DataController.GetInstance().SubBoredom(10);
@@ -21,5 +21,9 @@ public class PlayButton : MonoBehaviour
         {
             DataController.GetInstance().SetFavor(100);
         }
+    }*/
+    public void OnClick()
+    {
+        DataController.GetInstance().SetToyCheckTRUE();
     }
 }

@@ -42,11 +42,12 @@ public class DataController : MonoBehaviour
     // boolean
     bool washCheck=false;
     bool dragCheck = false;
-    bool inventoryCheck = false;
+    bool foodCheck = false;
+    bool toyCheck = false;
 
-    // 탭 번호
-    public int selectedTab = 0;
-    public int selectedItem = 0;
+    // 아이템
+    int itemCode = 0;
+    int toyCode = 0;
 
     void Awake()
     {
@@ -333,41 +334,48 @@ public class DataController : MonoBehaviour
         return dragCheck;
     }
 
-    public bool GetInventoryCheck()
+    public bool GetFoodCheck()
     {
-        return inventoryCheck;
+        return foodCheck;
+    }
+    public void SetFoodCheckTRUE()
+    {
+        foodCheck = true;
+    }
+    public void SetFoodCheckFALSE()
+    {
+        foodCheck = false;
     }
 
-    public void SetInventoryCheckTRUE()
+    public void SetItemCode(int Code)
     {
-        inventoryCheck = true;
+        itemCode = Code;
     }
-    public void SetInventoryCheckFALSE()
+    public int GetItemCode()
     {
-        inventoryCheck = false;
-    }
-
-    public void SetTabCheckFood()
-    {
-        selectedTab = 0;
-    }
-    public void SetTabCheckToy()
-    {
-        selectedTab = 1;
-    }
-    public int GetTabCheck()
-    {
-        return selectedTab;
+        return itemCode;
     }
 
-    public int GetItemCheck()
+    public bool GetToyCheck()
     {
-        return selectedItem;
+        return toyCheck;
+    }
+    public void SetToyCheckTRUE()
+    {
+        toyCheck = true;
+    }
+    public void SetToyCheckFALSE()
+    {
+        toyCheck = false;
     }
 
-    public void SetItem(int itemNumber)
+    public void SetToyCode(int Code)
     {
-        selectedItem = itemNumber;
+        toyCode = Code;
+    }
+    public int GetToyCode()
+    {
+        return toyCode;
     }
 }
 
