@@ -121,10 +121,10 @@ public class Inventory : MonoBehaviour
                 break;
         } // 탭에 따른 아이템 분류를 인벤토리 탭 리스트에 추가
 
-        for(int i = 0; i < inventoryItemList.Count; i++)
+        for(int i = 0; i < inventoryTabList.Count; i++)
         {
             slots[i].gameObject.SetActive(true);
-            slots[i].AddItem(inventoryItemList[i]);
+            slots[i].AddItem(inventoryTabList[i]);
         }
 
         SelectedItem();
@@ -137,7 +137,7 @@ public class Inventory : MonoBehaviour
         {
             StopAllCoroutines();
 
-            Color color = slots[0].selected_Item.GetComponent<Image>().color;
+            Color color = slots[selectedItem].selected_Item.GetComponent<Image>().color;
             color.a = 0f;
             for(int i = 0; i < inventoryTabList.Count; i++)
             {
@@ -152,17 +152,18 @@ public class Inventory : MonoBehaviour
     {
         while (itemActivated)
         {
-            Color color = slots[selectedItem].GetComponent<Image>().color;
+           Color color = slots[selectedItem].GetComponent<Image>().color;
             while (color.a < 0.5f)
             {
-                color.a += 0.03f;
+                color.a +=0.5f;
                 slots[selectedItem].selected_Item.GetComponent<Image>().color = color;
                 yield return waitTime;
             }
             while (color.a > 0.5f)
             {
-                color.a -= 0.03f;
+                color.a -=0.5f;
                 slots[selectedItem].selected_Item.GetComponent<Image>().color = color;
+                Debug.Log("dmdel");
                 yield return waitTime;
             }
             yield return new WaitForSeconds(0.3f);
@@ -172,7 +173,8 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         selectedTab = DataController.GetInstance().GetTabCheck();
-
+        selectedItem = DataController.GetInstance().GetItemCheck();
+        Debug.Log(selectedItem);
         if (DataController.GetInstance().GetInventoryCheck() == true)
         {
                 go.SetActive(true);
@@ -183,6 +185,7 @@ public class Inventory : MonoBehaviour
             {
                 Color color = selectedTabImages[selectedTab].GetComponent<Image>().color;
                 color.a = 0.25f;
+                
                 selectedTabImages[selectedTab].GetComponent<Image>().color = color;
                 itemActivated = true;
                 tabActivated = false;

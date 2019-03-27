@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Image icon;
+   // public Image icon;
     public Text itemName_Text;
     public Text itemCount_Text;
     public GameObject selected_Item;

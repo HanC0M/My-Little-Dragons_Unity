@@ -45,7 +45,8 @@ public class DataController : MonoBehaviour
     bool inventoryCheck = false;
 
     // 탭 번호
-    public int selectedTab = 0; 
+    public int selectedTab = 0;
+    public int selectedItem = 0;
 
     void Awake()
     {
@@ -357,6 +358,16 @@ public class DataController : MonoBehaviour
     public int GetTabCheck()
     {
         return selectedTab;
+    }
+
+    public int GetItemCheck()
+    {
+        return selectedItem;
+    }
+
+    public void SetItem(int itemNumber)
+    {
+        selectedItem = itemNumber;
     }
 }
 

@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\ParameterManager.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\ShowInventory.cs" />
+    <Compile Include="Assets\Scripts\SlotButton.cs" />
     <Compile Include="Assets\Scripts\ToyTab.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\UpgradeButton.cs" />
