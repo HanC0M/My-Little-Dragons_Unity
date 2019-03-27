@@ -42,6 +42,11 @@ public class DataController : MonoBehaviour
     // boolean
     bool washCheck=false;
     bool dragCheck = false;
+    bool inventoryCheck = false;
+
+    // 탭 번호
+    public int selectedTab = 0; 
+
     void Awake()
     {
         // KEY : VALUE
@@ -325,6 +330,33 @@ public class DataController : MonoBehaviour
     public bool GetDragCheck()
     {
         return dragCheck;
+    }
+
+    public bool GetInventoryCheck()
+    {
+        return inventoryCheck;
+    }
+
+    public void SetInventoryCheckTRUE()
+    {
+        inventoryCheck = true;
+    }
+    public void SetInventoryCheckFALSE()
+    {
+        inventoryCheck = false;
+    }
+
+    public void SetTabCheckFood()
+    {
+        selectedTab = 0;
+    }
+    public void SetTabCheckToy()
+    {
+        selectedTab = 1;
+    }
+    public int GetTabCheck()
+    {
+        return selectedTab;
     }
 }
 

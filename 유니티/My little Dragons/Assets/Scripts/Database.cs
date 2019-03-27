@@ -30,8 +30,8 @@ public class Database : MonoBehaviour
         itemList.Add(new Item(1006, "쓴 맛 구미", "엄청 쓴 맛이 나는 구미이다.", Item.ItemType.Food));
 
         // 장난감(Toy)
-        itemList.Add(new Item(1007, "테니스공", "굴리면서 놀기 좋은 공이다.", Item.ItemType.Food));
-        itemList.Add(new Item(1008, "원반", "던지면 돌아올 것 같은 원반이다.", Item.ItemType.Food));
-        itemList.Add(new Item(1009, "용 인형", "새끼용 형태의 귀여운 인형이다.", Item.ItemType.Food));
+        itemList.Add(new Item(1007, "테니스공", "굴리면서 놀기 좋은 공이다.", Item.ItemType.Toy));
+        itemList.Add(new Item(1008, "원반", "던지면 돌아올 것 같은 원반이다.", Item.ItemType.Toy));
+        itemList.Add(new Item(1009, "용 인형", "새끼용 형태의 귀여운 인형이다.", Item.ItemType.Toy));
     }
 }
