@@ -60,28 +60,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BoyouGetSu.cs" />
     <Compile Include="Assets\Scripts\ClickButton.cs" />
-    <Compile Include="Assets\Scripts\CSVReader.cs" />
-    <Compile Include="Assets\Scripts\Database.cs" />
-    <Compile Include="Assets\Scripts\DataController.cs" />
+    <Compile Include="Assets\Scripts\Data\CSVReader.cs" />
+    <Compile Include="Assets\Scripts\Data\DataController.cs" />
     <Compile Include="Assets\Scripts\Drag.cs" />
     <Compile Include="Assets\Scripts\DragonSprite.cs" />
-    <Compile Include="Assets\Scripts\FoodButtton.cs" />
+    <Compile Include="Assets\Scripts\FoodInven\FoodButtton.cs" />
     <Compile Include="Assets\Scripts\FoodInven\FoodClick.cs" />
     <Compile Include="Assets\Scripts\FoodInven\FoodExit.cs" />
     <Compile Include="Assets\Scripts\FoodInven\FoodManager.cs" />
     <Compile Include="Assets\Scripts\FoodInven\FoodPopUp.cs" />
     <Compile Include="Assets\Scripts\FoodInven\FoodUseButton.cs" />
-    <Compile Include="Assets\Scripts\FoodInventory.cs" />
-    <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\ItemCount.cs" />
     <Compile Include="Assets\Scripts\ParameterManager.cs" />
-    <Compile Include="Assets\Scripts\PlayButton.cs" />
-    <Compile Include="Assets\Scripts\ShowInventory.cs" />
-    <Compile Include="Assets\Scripts\ToyClick.cs" />
-    <Compile Include="Assets\Scripts\ToyExit.cs" />
-    <Compile Include="Assets\Scripts\ToyManager.cs" />
-    <Compile Include="Assets\Scripts\ToyPopUp.cs" />
-    <Compile Include="Assets\Scripts\ToyUseButton.cs" />
+    <Compile Include="Assets\Scripts\Reset.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopButton.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopExit.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopPopUp.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopPurchase.cs" />
+    <Compile Include="Assets\Scripts\Toy\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\Toy\ToyClick.cs" />
+    <Compile Include="Assets\Scripts\Toy\ToyExit.cs" />
+    <Compile Include="Assets\Scripts\Toy\ToyManager.cs" />
+    <Compile Include="Assets\Scripts\Toy\ToyPopUp.cs" />
+    <Compile Include="Assets\Scripts\Toy\ToyUseButton.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\WashCheck.cs" />
