@@ -65,6 +65,19 @@ public class DataController : MonoBehaviour
     int evo_1 = 0;
     int evo_2 = 0;
 
+    // 가격
+    int p_salty = 15;
+    int p_goso = 15;
+    int p_sweet = 15;
+    int p_sinmat = 15;
+    int p_spicy = 15;
+    int p_sseunmat = 15;
+    int p_tennis = 20;
+    int p_wonban = 30;
+    int p_doll = 50;
+    int p_evo_1 = 0;
+    int p_evo_2 = 0;
+    int getPrice = 0;
     void Awake()
     {
         // KEY : VALUE
@@ -476,124 +489,56 @@ public class DataController : MonoBehaviour
         {
             case 0:
                 salty++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Salty", salty);
                 break;
             case 1:
                 goso++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Goso", goso);
                 break;
             case 2:
                 spicy++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Spicy", spicy);
                 break;
             case 3:
                 sinmat++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
                 break;
             case 4:
                 sseunmat++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Sseunmat", sseunmat);
                 break;
             case 5:
                 sweet++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Sweet", sweet);
                 break;
             case 6:
                 tennis++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Tennis", tennis);
                 break;
             case 7:
                 wonban++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Wonban", wonban);
                 break;
             case 8:
                 doll++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Doll", doll);
                 break;
             case 9:
                 evo_1++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                PlayerPrefs.SetInt("Evo_1", evo_1);
                 break;
             case 10:
-                evo_2++;
-                if (m_gold >= 10f)
-                {
-                    SubGold(10f);
-                }
-                else
-                {
-                    break;
-                }
+                SubGold(DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode()));
+                
                 break;
         }
     }
@@ -605,6 +550,7 @@ public class DataController : MonoBehaviour
                 if (salty >= 1)
                 {
                     salty--;
+                    PlayerPrefs.SetInt("Salty", salty);
                 }
                 else
                 {
@@ -615,6 +561,7 @@ public class DataController : MonoBehaviour
                 if (goso >= 1)
                 {
                     goso--;
+                    PlayerPrefs.SetInt("Goso", goso);
                 }
                 else
                 {
@@ -623,22 +570,34 @@ public class DataController : MonoBehaviour
                 break;
             case 2:
                 if (spicy >= 1)
+                {
                     spicy--;
+                    PlayerPrefs.SetInt("Spicy", spicy);
+                }
                 else break;
                 break;
             case 3:
                 if (sinmat >= 1)
+                {
                     sinmat--;
+                    PlayerPrefs.SetInt("Sinmat", sinmat);
+                }
                 else break;
                 break;
             case 4:
                 if (sseunmat >= 1)
+                {
                     sseunmat--;
+                    PlayerPrefs.SetInt("Sseunmat", sseunmat);
+                }
                 else break;
                 break;
             case 5:
                 if (sweet >= 1)
+                {
                     sweet--;
+                    PlayerPrefs.SetInt("Sweet", sweet);
+                }
                 else break;
                 break;
      
@@ -650,22 +609,33 @@ public class DataController : MonoBehaviour
         {
             case 0:
                 if (tennis >= 1)
+                {
                     tennis--;
-                else Debug.Log("응디") ;
+                    PlayerPrefs.SetInt("Tennis", tennis);
+                }
+                
                 break;
             case 1:
                 if (wonban >= 1)
-                    wonban--;
+                {
+                    wonban--; PlayerPrefs.SetInt("Wonban", wonban);
+                }
                 else break;
                 break;
             case 2:
                 if (doll >= 1)
+                {
                     doll--;
+                    PlayerPrefs.SetInt("Doll", doll);
+                }
                 else break;
                 break;
             case 3:
                 if (evo_1 >= 1)
+                {
                     evo_1--;
+                    PlayerPrefs.SetInt("Evo_1", evo_1);
+                }
                 else break;
                 break;
             case 4:
@@ -675,6 +645,47 @@ public class DataController : MonoBehaviour
                 break;
         }
     }
-    
+
+    public int GetPrice(int shopCode)
+    {
+
+        switch (shopCode)
+        {
+            case 0:
+                getPrice = p_salty;
+                break;
+            case 1:
+                getPrice = p_goso;
+                break;
+            case 2:
+                getPrice = p_spicy;
+                break;
+            case 3:
+                getPrice = p_sinmat;
+                break;
+            case 4:
+                getPrice = p_sseunmat;
+                break;
+            case 5:
+                getPrice = p_sweet;
+                break;
+            case 6:
+                getPrice = p_tennis;
+                break;
+            case 7:
+                getPrice = p_wonban;
+                break;
+            case 8:
+                getPrice = p_doll;
+                break;
+            case 9:
+                getPrice = p_evo_1;
+                break;
+            case 10:
+                getPrice = p_evo_2;
+                break;
+        }
+        return getPrice;
+    }
 }
 

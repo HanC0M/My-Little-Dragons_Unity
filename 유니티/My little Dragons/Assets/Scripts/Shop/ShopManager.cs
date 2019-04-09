@@ -7,10 +7,18 @@ public class ShopManager : MonoBehaviour
 {
     public Text itemName;
     public Text description;
+    public Text itemCount;
+    public Text itemPrice;
+    int i_itemCount;
+    int i_itemPrice;
+
+   
+    
 
     void Update()
     {
-
+        i_itemCount = DataController.GetInstance().GetItemCount(DataController.GetInstance().GetShopCode());
+        i_itemPrice= DataController.GetInstance().GetPrice(DataController.GetInstance().GetShopCode());
         switch (DataController.GetInstance().GetShopCode())
         {
             case 0:
@@ -65,6 +73,9 @@ public class ShopManager : MonoBehaviour
                 description.text = "새끼용과 똑닮은 인형이다.";
                 break;
         }
-        
+        itemCount.text = " "+i_itemCount;
+        itemPrice.text = " " + i_itemPrice;
     }
+
+    
 }

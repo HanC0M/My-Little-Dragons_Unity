@@ -12,7 +12,7 @@ public class ToyUseButton : MonoBehaviour
                 if (DataController.GetInstance().GetItemCount(6) >= 1)
                 {
                     DataController.GetInstance().UseToyItem(0);
-                    DataController.GetInstance().SubBoredom(8f);
+                    DataController.GetInstance().SubBoredom(4f);
                     if (DataController.GetInstance().GetBoredom() <= 0)
                     {
                         DataController.GetInstance().SetBoredom(0);
@@ -22,7 +22,7 @@ public class ToyUseButton : MonoBehaviour
                     {
                         DataController.GetInstance().SetFavor(100);
                     }
-                    DataController.GetInstance().AddExp(7f);
+                    DataController.GetInstance().AddExp(5f);
                 }
                 break;
 
@@ -30,7 +30,7 @@ public class ToyUseButton : MonoBehaviour
                 DataController.GetInstance().UseToyItem(1);
                 if (DataController.GetInstance().GetItemCount(7) >= 1)
                 {
-                    DataController.GetInstance().SubBoredom(14f);
+                    DataController.GetInstance().SubBoredom(8f);
                     if (DataController.GetInstance().GetBoredom() <= 0)
                     {
                         DataController.GetInstance().SetBoredom(0);
@@ -40,7 +40,7 @@ public class ToyUseButton : MonoBehaviour
                     {
                         DataController.GetInstance().SetFavor(100);
                     }
-                    DataController.GetInstance().AddExp(9f);
+                    DataController.GetInstance().AddExp(8f);
                 }
                 break;
 
@@ -53,12 +53,12 @@ public class ToyUseButton : MonoBehaviour
                     {
                         DataController.GetInstance().SetBoredom(0);
                     }
-                    DataController.GetInstance().AddFavor(10f);
+                    DataController.GetInstance().AddFavor(15f);
                     if (DataController.GetInstance().GetFavor() >= 100)
                     {
                         DataController.GetInstance().SetFavor(100);
                     }
-                    DataController.GetInstance().AddExp(9f);
+                    DataController.GetInstance().AddExp(14f);
                 }
                 break;
 
